@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/*
+protocol SomeProtocol {
+    
+    var someGetProperty:Int {get} // değer alınan property
+    var somegetAndsetProperty:String {get set} // değer alınan ve atanan property
+    
+    func someMethod(someParameter: Double ) -&gt; Float
+}
+
+
+
+
+
+
+// class ile protokol kullanımı
+
+
+class SomeSuperClass {
+    var someSuperProperty:Bool = false
+}
+
+
+
+class SomeClass: SomeSuperClass,SomeProtocol  {
+    var someGetProperty: Int = 0
+
+    var somegetAndsetProperty: String = ""
+
+    func someMethod(someParameter: Double) -&gt; Float {
+        return .zero
+    }
+
+}
+
+
+
+
+
+
+// struct ile protokol kullanımı
+
+struct SomeStruct: SomeProtocol {
+    var someGetProperty: Int
+
+    var somegetAndsetProperty: String
+
+    func someMethod(someParameter: Double) -&gt; Float {
+        &lt;#code#&gt;
+    }
+}
+
+*/
+
+
+
+
+
+// CaseIterable protokolü ile enum içindeki caseleri kolay bir şekilde dönebiliriz
+/*
+enum HavaDurumu: CaseIterable {
+    case acik 
+    case yagmurlu 
+    case bulutlu 
+}
+
+
+for havadurumu in HavaDurumu.allCases{
+    print(havadurumu)
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+// Aşağıdaki örnekte, bir Vehicle protokolü tanımlanır ve bu protokolü uygulayan iki farklı tür olan Car ve Motorcycle sınıfları oluşturulur.
+
+/*
+protocol Vehicle {
+    var wheels: Int { get }
+    func startEngine()
+    func stopEngine()
+}
+
+
+class Car: Vehicle {
+    var wheels: Int = 4
+    
+    func startEngine() {
+        print("Car engine started")
+    }
+    
+    func stopEngine() {
+        print("Car engine stopped")
+    }
+}
+
+class Motorcycle: Vehicle {
+    var wheels: Int = 2
+    
+    func startEngine() {
+        print("Motorcycle engine started")
+    }
+    
+    func stopEngine() {
+        print("Motorcycle engine stopped")
+    }
+}
+
+let myCar = Car()
+let myMotorcycle = Motorcycle()
+
+myCar.startEngine()    // Çıktı: "Car engine started"
+myMotorcycle.startEngine()  // Çıktı: "Motorcycle engine started"
+*/
+
+
+
+
+
+
+
+//Aşağıdaki örnekte, bir MessageDelegate protokolü tanımlanır ve bu protokolü uygulayan bir MessageHandler sınıfı oluşturulur. MessageHandler sınıfı, bir başka sınıfın (örneğin, bir kullanıcı arayüzü görünümünün) belirli bir davranışını yönlendirmek için kullanılabilir.
+
+
+/*
+protocol MessageDelegate {
+    func sendMessage(message: String)
+}
+
+class MessageHandler: MessageDelegate {
+    func sendMessage(message: String) {
+        print("Sending message: \(message)")
+    }
+}
+
+class UserInterface {
+    var delegate: MessageDelegate?
+    
+    func userDidTapSendButton() {
+        delegate?.sendMessage(message: "Hello, World!")
+    }
+}
+
+let messageHandler = MessageHandler()
+let userInterface = UserInterface()
+
+userInterface.delegate = messageHandler
+userInterface.userDidTapSendButton()  // Çıktı: "Sending message: Hello, World!"
+*/
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 2697}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
