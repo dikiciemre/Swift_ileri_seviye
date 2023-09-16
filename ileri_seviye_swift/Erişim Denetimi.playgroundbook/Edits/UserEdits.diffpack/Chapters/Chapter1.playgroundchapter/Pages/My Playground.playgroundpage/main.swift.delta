@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Private: erişime en kapalı erişim düzeyi
+
+class SomeClass {
+
+    
+    private var someProperty : String
+    
+    init(someProperty: String){
+        self.someProperty = someProperty
+    }
+    
+    
+    // getter method tanımlandı
+    func getSomeProperty() -&gt; String {
+        return someProperty
+    }
+}
+
+
+let someClass = SomeClass(someProperty: "Default Value") // bir nesne oluşturuldu
+
+print(someClass.getSomeProperty())
+
+
+
+// Fileprivate:dosyası içinde erişime açık dosya dışına kapalı
+
+print(someClass.getSomeProperty())
+
+class SomeSubClass: SomeClass {
+    let counter:Int = 0
+}
+
+let SomeSbClass = someClass
+// Internal : varsayılan (default) şekilde olan erişim düzeyi
+
+// Public: Modüller arası  erişim düzeyi 
+
+// Open : tam anlamıyla erişilebilir düzey
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 770}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>

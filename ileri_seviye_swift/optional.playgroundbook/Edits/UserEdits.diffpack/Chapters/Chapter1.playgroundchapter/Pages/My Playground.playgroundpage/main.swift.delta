@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//optional yapısı
+
+/*
+var someOptionalVariable:Int? = 9 // normalde bu koda değer atamdan çalışmaz ama biz optional tanımladık
+var someVariable : Int = 5
+
+var sum = someVariable + someOptionalVariable! // ünlem işareti ile optional olan bir değeri unwrapped edebiliriz ancak optional değere değer ataması yapmalıyız!
+print(sum)
+*/
+
+
+
+
+/*
+ // kullanımı daha doğru olan bir unwrapped kullanımı
+ // bir fonksiyon içine yazılmalıdır
+ 
+var someOptionalVariable:Int? = 9 // bu örnekte eğer optional değere değer atamsı yapmazsak value is nil çıktısı verir.
+var someVariable : Int = 5
+
+func someFunc(){ 
+if let unwrapped = someOptionalVariable{
+    var sum = someVariable + unwrapped
+    print(sum)
+
+}
+    print("value is nil")
+}
+ 
+someFunc()
+*/
+
+
+
+
+
+/*
+ // guard ile unwrapped etme şekli
+ // daha kısa bir kullanım içerir
+ 
+var someOptionalVariable:Int? 
+var someVariable : Int = 5
+
+func guardUnwrapped(){
+    guard let unwrappedValue = someOptionalVariable else {return}
+    
+    let sum = unwrappedValue + someVariable
+    print(sum)
+}
+guardUnwrapped()
+*/
+
+
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1057}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
